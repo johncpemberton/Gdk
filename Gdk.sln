@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gdk", "Gdk\Gdk.vcxproj", "{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{032C3BF5-E464-4210-AE11-76AA4544C778} = {032C3BF5-E464-4210-AE11-76AA4544C778}
+		{2D420026-0592-423E-8C64-59BEE444EBB2} = {2D420026-0592-423E-8C64-59BEE444EBB2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gdk.Platform.Uefi", "Gdk.Platform.Uefi\Gdk.Platform.Uefi.vcxproj", "{032C3BF5-E464-4210-AE11-76AA4544C778}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gdk.Platform.Windows", "Gdk.Platform.Windows\Gdk.Platform.Windows.vcxproj", "{2D420026-0592-423E-8C64-59BEE444EBB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gdk.Test.Uefi", "Gdk.Test.Uefi\Gdk.Test.Uefi.vcxproj", "{FD687499-C084-4047-86C1-B66ED78B0350}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB} = {B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Uefi.Debug|Win32 = Uefi.Debug|Win32
+		Uefi.Debug|x64 = Uefi.Debug|x64
+		Uefi.Release|Win32 = Uefi.Release|Win32
+		Uefi.Release|x64 = Uefi.Release|x64
+		Windows.Debug|Win32 = Windows.Debug|Win32
+		Windows.Debug|x64 = Windows.Debug|x64
+		Windows.Release|Win32 = Windows.Release|Win32
+		Windows.Release|x64 = Windows.Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Debug|Win32.ActiveCfg = Uefi.Debug|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Debug|Win32.Build.0 = Uefi.Debug|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Debug|x64.ActiveCfg = Uefi.Debug|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Debug|x64.Build.0 = Uefi.Debug|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Release|Win32.ActiveCfg = Uefi.Release|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Release|Win32.Build.0 = Uefi.Release|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Release|x64.ActiveCfg = Uefi.Release|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Uefi.Release|x64.Build.0 = Uefi.Release|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Debug|Win32.ActiveCfg = Windows.Debug|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Debug|Win32.Build.0 = Windows.Debug|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Debug|x64.ActiveCfg = Windows.Debug|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Debug|x64.Build.0 = Windows.Debug|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Release|Win32.ActiveCfg = Windows.Release|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Release|Win32.Build.0 = Windows.Release|Win32
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Release|x64.ActiveCfg = Windows.Release|x64
+		{B662A6F9-C39C-4BCA-824B-FEE577E9A3EB}.Windows.Release|x64.Build.0 = Windows.Release|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Uefi.Debug|Win32.ActiveCfg = Windows.Debug|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Uefi.Debug|x64.ActiveCfg = Windows.Debug|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Uefi.Release|Win32.ActiveCfg = Windows.Debug|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Uefi.Release|x64.ActiveCfg = Windows.Debug|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Debug|Win32.ActiveCfg = Windows.Debug|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Debug|Win32.Build.0 = Windows.Debug|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Debug|x64.ActiveCfg = Windows.Debug|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Debug|x64.Build.0 = Windows.Debug|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Release|Win32.ActiveCfg = Windows.Release|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Release|Win32.Build.0 = Windows.Release|Win32
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Release|x64.ActiveCfg = Windows.Release|x64
+		{2D420026-0592-423E-8C64-59BEE444EBB2}.Windows.Release|x64.Build.0 = Windows.Release|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Debug|Win32.ActiveCfg = Uefi.Debug|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Debug|Win32.Build.0 = Uefi.Debug|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Debug|x64.ActiveCfg = Uefi.Debug|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Debug|x64.Build.0 = Uefi.Debug|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Release|Win32.ActiveCfg = Uefi.Release|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Release|Win32.Build.0 = Uefi.Release|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Release|x64.ActiveCfg = Uefi.Release|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Uefi.Release|x64.Build.0 = Uefi.Release|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Windows.Debug|Win32.ActiveCfg = Uefi.Debug|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Windows.Debug|x64.ActiveCfg = Uefi.Debug|x64
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Windows.Release|Win32.ActiveCfg = Uefi.Debug|Win32
+		{032C3BF5-E464-4210-AE11-76AA4544C778}.Windows.Release|x64.ActiveCfg = Uefi.Debug|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Debug|Win32.ActiveCfg = Uefi.Debug|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Debug|Win32.Build.0 = Uefi.Debug|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Debug|x64.ActiveCfg = Uefi.Debug|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Debug|x64.Build.0 = Uefi.Debug|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Release|Win32.ActiveCfg = Uefi.Release|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Release|Win32.Build.0 = Uefi.Release|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Release|x64.ActiveCfg = Uefi.Release|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Uefi.Release|x64.Build.0 = Uefi.Release|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Windows.Debug|Win32.ActiveCfg = Uefi.Debug|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Windows.Debug|x64.ActiveCfg = Uefi.Debug|x64
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Windows.Release|Win32.ActiveCfg = Uefi.Debug|Win32
+		{FD687499-C084-4047-86C1-B66ED78B0350}.Windows.Release|x64.ActiveCfg = Uefi.Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

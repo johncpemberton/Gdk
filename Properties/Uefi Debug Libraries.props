@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>
+$(MdeModuleLibPath)UefiHiiLib\UefiHiiLib\$(UdkOutDir)\UefiHiiLib.lib;
+$(MdeModuleLibPath)UefiHiiServicesLib\UefiHiiServicesLib\$(UdkOutDir)\UefiHiiServicesLib.lib;
+$(MdeLibPath)BaseCacheMaintenanceLib\BaseCacheMaintenanceLib\$(UdkOutDir)\BaseCacheMaintenanceLib.lib;
+$(MdeLibPath)BaseDebugPrintErrorLevelLib\BaseDebugPrintErrorLevelLib\$(UdkOutDir)\BaseDebugPrintErrorLevelLib.lib;
+$(MdeLibPath)UefiLib\UefiLib\$(UdkOutDir)\UefiLib.lib;
+$(MdeLibPath)BaseLib\BaseLib\$(UdkOutDir)\BaseLib.lib;
+$(MdeLibPath)BaseMemoryLib\BaseMemoryLib\$(UdkOutDir)\BaseMemoryLib.lib;
+$(MdeLibPath)BasePcdLibNull\BasePcdLibNull\$(UdkOutDir)\BasePcdLibNull.lib;
+$(MdeLibPath)BasePeCoffGetEntryPointLib\BasePeCoffGetEntryPointLib\$(UdkOutDir)\BasePeCoffGetEntryPointLib.lib;
+$(MdeLibPath)BasePeCoffLib\BasePeCoffLib\$(UdkOutDir)\BasePeCoffLib.lib;
+$(MdeLibPath)BasePerformanceLibNull\BasePerformanceLibNull\$(UdkOutDir)\BasePerformanceLibNull.lib;
+$(MdeLibPath)BasePrintLib\BasePrintLib\$(UdkOutDir)\BasePrintLib.lib;
+$(MdeLibPath)BaseReportStatusCodeLibNull\BaseReportStatusCodeLibNull\$(UdkOutDir)\BaseReportStatusCodeLibNull.lib;
+$(MdeLibPath)BaseSynchronizationLib\BaseSynchronizationLib\$(UdkOutDir)\BaseSynchronizationLib.lib;
+$(MdeLibPath)BaseTimerLibNullTemplate\BaseTimerLibNullTemplate\$(UdkOutDir)\BaseTimerLibNullTemplate.lib;
+$(MdeLibPath)UefiMemoryAllocationLib\UefiMemoryAllocationLib\$(UdkOutDir)\UefiMemoryAllocationLib.lib;
+$(MdeLibPath)UefiRuntimeServicesTableLib\UefiRuntimeServicesTableLib\$(UdkOutDir)\UefiRuntimeServicesTableLib.lib;
+$(MdeLibPath)UefiDevicePathLib\UefiDevicePathLib\$(UdkOutDir)\UefiDevicePathLib.lib;
+$(MdeLibPath)UefiDebugLibConOut\UefiDebugLibConOut\$(UdkOutDir)\UefiDebugLibConOut.lib;
+$(MdeLibPath)UefiBootServicesTableLib\UefiBootServicesTableLib\$(UdkOutDir)\UefiBootServicesTableLib.lib;
+$(MdeLibPath)DxeServicesLib\DxeServicesLib\$(UdkOutDir)\DxeServicesLib.lib;
+$(MdeLibPath)DxeServicesTableLib\DxeServicesTableLib\$(UdkOutDir)\DxeServicesTableLib.lib;
+$(MdeLibPath)DxeHobLib\DxeHobLib\$(UdkOutDir)\DxeHobLib.lib;
+$(ShellLibPath)UefiShellLib\UefiShellLib\$(UdkOutDir)\UefiShellLib.lib;
+	  </AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <UdkInstallDir>C:\UEFI\UDK2015\</UdkInstallDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)UDK2014\ShellPkg\Include\;$(SolutionDir)UDK2014\IntelFrameworkModulePkg\Include\;$(SolutionDir)UDK2014\IntelFrameworkPkg\Include\;$(SolutionDir)UDK2014\MdeModulePkg\Include\;$(SolutionDir)UDK2014\MdePkg\Include\;$(SolutionDir)UDK2014\MdePkg\Include\X64\;$(SolutionDir)UDK2014\NetworkPkg\Include\;$(SolutionDir)UDK2014\SecurityPkg\Include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="UdkInstallDir">
+      <Value>$(UdkInstallDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

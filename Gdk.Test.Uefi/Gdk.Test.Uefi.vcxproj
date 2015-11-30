@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Uefi.Debug|Win32">
+      <Configuration>Uefi.Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Uefi.Debug|x64">
+      <Configuration>Uefi.Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Uefi.Release|Win32">
+      <Configuration>Uefi.Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Uefi.Release|x64">
+      <Configuration>Uefi.Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD687499-C084-4047-86C1-B66ED78B0350}</ProjectGuid>
+    <RootNamespace>GdkTestUefi</RootNamespace>
+    <ProjectName>Gdk.Test.Uefi</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
+    <Import Project="..\Properties\Uefi Debug Libraries.props" />
+    <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
+    <Import Project="..\Properties\Uefi Debug Libraries.props" />
+    <Import Project="..\Properties\Uefi Application.props" />
+    <Import Project="..\Properties\Gdk.Platform.Uefi Library.props" />
+    <Import Project="..\Properties\Gdk.Platform.Uefi Include Path.props" />
+    <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'" />
+  <ItemGroup>
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
