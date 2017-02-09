@@ -27,10 +27,22 @@
 //
 // **/
 
-#include "UefiDependencies.h"
-#include "Test.hpp"
 
-void Main()
-{
-  Test();
-}
+#pragma once
+
+
+class TestClass {
+
+  static int i;
+
+public:
+
+  TestClass () { ++i; }
+
+  int Count() { return i; }
+
+};
+
+
+void Test();
+

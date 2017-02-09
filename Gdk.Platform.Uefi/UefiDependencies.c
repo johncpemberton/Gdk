@@ -1,6 +1,6 @@
 // /** The BSD 2-Clause License
 //
-// Copyright (c) 2015, John Pemberton
+// Copyright (c) 2017, John Pemberton
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without
@@ -235,6 +235,14 @@ extern const  UINT16  _gPcd_FixedAtBuild_PcdS3BootScriptRuntimeTableReservePageN
 #define _PCD_GET_MODE_16_PcdS3BootScriptRuntimeTableReservePageNumber  _gPcd_FixedAtBuild_PcdS3BootScriptRuntimeTableReservePageNumber
 //#define _PCD_SET_MODE_16_PcdS3BootScriptRuntimeTableReservePageNumber  ASSERT(FALSE)  // It is not allowed to set value for a FIXED_AT_BUILD PCD
 
+#define _PCD_TOKEN_PcdFixedDebugPrintErrorLevel  11U
+#define _PCD_SIZE_PcdFixedDebugPrintErrorLevel 4
+#define _PCD_GET_MODE_SIZE_PcdFixedDebugPrintErrorLevel  _PCD_SIZE_PcdFixedDebugPrintErrorLevel 
+#define _PCD_VALUE_PcdFixedDebugPrintErrorLevel  0xFFFFFFFFU
+GLOBAL_REMOVE_IF_UNREFERENCED const UINT32 _gPcd_FixedAtBuild_PcdFixedDebugPrintErrorLevel = _PCD_VALUE_PcdFixedDebugPrintErrorLevel;
+extern const  UINT32  _gPcd_FixedAtBuild_PcdFixedDebugPrintErrorLevel;
+#define _PCD_GET_MODE_32_PcdFixedDebugPrintErrorLevel  _gPcd_FixedAtBuild_PcdFixedDebugPrintErrorLevel
+//#define _PCD_SET_MODE_32_PcdFixedDebugPrintErrorLevel  ASSERT(FALSE)  // It is not allowed to set value for a FIXED_AT_BUILD PCD
 
 VOID
 EFIAPI

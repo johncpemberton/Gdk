@@ -1,6 +1,6 @@
 // /** The BSD 2-Clause License
 //
-// Copyright (c) 2015, John Pemberton
+// Copyright (c) 2017, John Pemberton
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without
@@ -27,29 +27,18 @@
 //
 // **/
 
-//#include <string>
 
 #include "UefiDependencies.h"
+#include "Test.hpp"
 
+int TestClass::i = 0;
 
-void TestString()
+void Test()
 {
-  DEBUG((EFI_D_ERROR, "Initializing string...\n"));
-//  std::string mystr = "Testing yolo swaggins\n";
-  DEBUG((EFI_D_ERROR, "Printing string...\n"));
-//  DEBUG((EFI_D_ERROR, mystr.data()));
-  DEBUG((EFI_D_ERROR, "Done Printing String\n\n"));
+  TestClass t1, t2, t3;
+  TestClass *t4 = new TestClass();
 
+  DEBUG((EFI_D_ERROR, "t1: %d, t2: %d, t3: %d, t4: %d", t1.Count(), t2.Count(), t3.Count(), t4->Count()));
 
-  DEBUG((EFI_D_ERROR, "Starting string loop...\n"));
-  for (int i = 0; i < 20; ++i) {
-    DEBUG((EFI_D_ERROR, "initializing...\n"));
-//    mystr = "Number: ";
-    DEBUG((EFI_D_ERROR, "appending %d...\n", i));
-    //mystr += std::to_string(i);
-    DEBUG((EFI_D_ERROR, "appending new line...\n"));
-//    mystr += "\n";
-  }
-  DEBUG((EFI_D_ERROR, "Done with string loop.\n"));
-
+  delete t4;
 }

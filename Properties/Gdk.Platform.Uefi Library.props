@@ -4,9 +4,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
   <ItemDefinitionGroup>
-    <Lib>
+    <Link>
       <AdditionalDependencies>$(OutDir)Gdk.Platform.Uefi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

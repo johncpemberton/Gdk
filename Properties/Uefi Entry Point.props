@@ -4,8 +4,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
   <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>"$(UdkInstallDir)BaseTools\Bin\Win32\GenFw.exe" -v -e UEFI_APPLICATION "$(TargetPath)" -o "$(TargetDir)$(TargetName).efi" &amp;&amp; if exist D:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" D:\ &amp; if exist E:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" E:\ &amp; if exist F:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" F:\ &amp; if exist G:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" G:\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Message>Convert to UEFI driver</Message>
+    </PostBuildEvent>
     <Link>
       <EntryPointSymbol>_ModuleEntryPoint</EntryPointSymbol>
+      <SubSystem>EFI Application</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

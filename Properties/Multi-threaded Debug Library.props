@@ -6,6 +6,7 @@
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
+    <Link />
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

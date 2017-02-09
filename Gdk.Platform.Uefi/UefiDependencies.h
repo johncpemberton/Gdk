@@ -1,6 +1,6 @@
 // /** The BSD 2-Clause License
 //
-// Copyright (c) 2015, John Pemberton
+// Copyright (c) 2017, John Pemberton
 // All rights reserved.
 // 
 // Redistribution and use in source and binary forms, with or without
@@ -128,7 +128,7 @@ UefiMain(
   IN  EFI_SYSTEM_TABLE  *SystemTable
   );
 
-extern void __cdecl Main();
+extern void Main();
 
 #ifdef __cplusplus
 }

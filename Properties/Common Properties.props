@@ -6,6 +6,7 @@
     <IncludePath>$(VCInstallDir)include;$(IncludePath)</IncludePath>
     <GenerateManifest />
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
@@ -16,11 +17,11 @@
       <RandomizedBaseAddress />
       <EnableUAC />
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Link>
     <ClCompile>
       <StringPooling>true</StringPooling>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <ExceptionHandling>false</ExceptionHandling>
       <WarningLevel>Level4</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -30,9 +31,16 @@
       <PrecompiledHeader />
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
-      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4804;4100;4505;4127</DisableSpecificWarnings>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks />
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

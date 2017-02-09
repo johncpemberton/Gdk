@@ -43,7 +43,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Windows.Debug|Win32'" Label="Configuration">
@@ -53,7 +53,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Windows.Debug|x64'" Label="Configuration">
@@ -83,22 +83,50 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Label="PropertySheets">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'">
     <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
     <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)'=='Uefi.Debug' OR '$(Configuration)'=='Uefi.Release'">
     <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Uefi Library.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)'=='Windows.Debug' OR '$(Configuration)'=='Windows.Release'">
-    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Windows Library.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)'=='Uefi.Debug' OR '$(Configuration)'=='Windows.Debug'">
-    <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
     <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)'=='Uefi.Release' OR '$(Configuration)'=='Windows.Release'">
-    <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Uefi Library.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Uefi Library.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Uefi Library.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Windows.Debug|Win32'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Windows.Debug|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Windows.Release|Win32'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Windows Library.props" />
+    <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Windows.Release|x64'">
+    <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
+    <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
+    <Import Project="$(SolutionDir)\Properties\Gdk.Platform.Windows Library.props" />
     <Import Project="$(SolutionDir)\Properties\Multi-threaded Library.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -126,7 +154,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Windows.Release|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'">
+    <ClCompile />
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BootStrapper.cpp" />
   </ItemGroup>

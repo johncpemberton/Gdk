@@ -26,22 +26,19 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
@@ -52,7 +49,7 @@
     <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
     <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
     <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
-    <Import Project="..\Properties\Uefi Debug Libraries.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Debug Libraries.props" />
     <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
     <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
   </ImportGroup>
@@ -60,9 +57,8 @@
     <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
     <Import Project="$(SolutionDir)\Properties\Output Directory.props" />
     <Import Project="$(SolutionDir)\Properties\Uefi Development Kit.props" />
-    <Import Project="..\Properties\Uefi Debug Libraries.props" />
+    <Import Project="$(SolutionDir)\Properties\Uefi Debug Libraries.props" />
     <Import Project="$(SolutionDir)\Properties\Generate Debug Info.props" />
-    <Import Project="$(SolutionDir)\Properties\Multi-threaded Debug Library.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'">
     <Import Project="$(SolutionDir)\Properties\Common Properties.props" />
@@ -90,7 +86,12 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|Win32'" />
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Debug|x64'">
+    <ClCompile />
+    <Link>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Uefi.Release|x64'" />
   <ItemGroup>

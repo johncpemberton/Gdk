@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <Link>
-      <AdditionalDependencies>$(MdeLibPath)UefiApplicationEntryPoint\UefiApplicationEntryPoint\$(UdkOutDir)\UefiApplicationEntryPoint.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(OutDir)Gdk.Test.Uefi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

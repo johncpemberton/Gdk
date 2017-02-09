@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <PostBuildEvent>
-      <Command>"$(SolutionDir)Tools\GenFw.exe" -v -e UEFI_DRIVER "$(TargetPath)" -o "$(TargetDir)$(TargetName).efi" &amp;&amp; if exist D:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" D:\ &amp; if exist E:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" E:\ &amp; if exist F:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" F:\ &amp; if exist G:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" G:\</Command>
+      <Command>"$(UdkInstallDir)BaseTools\Bin\Win32\GenFw.exe" -v -e UEFI_DRIVER "$(TargetPath)" -o "$(TargetDir)$(TargetName).efi" &amp;&amp; if exist D:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" D:\ &amp; if exist E:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" E:\ &amp; if exist F:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" F:\ &amp; if exist G:\ xcopy /fyu "$(TargetDir)$(TargetName).efi" G:\</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup Label="UserMacros" />
   <ItemDefinitionGroup>
     <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

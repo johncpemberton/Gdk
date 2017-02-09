@@ -15,15 +15,15 @@
   </PropertyGroup>
   <PropertyGroup Label="UserMacros">
     <UdkInstallDir>C:\UEFI\UDK2015\</UdkInstallDir>
-	<UdkToolChain>VS2015x86</UdkToolChain>
-	<UdkOutDir>OUTPUT</UdkOutDir>
-	<ShellLibPath>$(UdkInstallDir)Build\Shell\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\ShellPkg\Library\</ShellLibPath>
-	<IntelFrameworkModuleLibPath>$(UdkInstallDir)Build\IntelFrameworkModuleAll\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\IntelFrameworkModulePkg\Library\</IntelFrameworkModuleLibPath>
-	<IntelFrameworkLibPath>$(UdkInstallDir)Build\IntelFramework\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\IntelFrameworkPkg\Library\</IntelFrameworkLibPath>
-	<MdeModuleLibPath>$(UdkInstallDir)Build\MdeModule\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\MdeModulePkg\Library\</MdeModuleLibPath>
-	<MdeLibPath>$(UdkInstallDir)Build\Mde\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\MdePkg\Library\</MdeLibPath>
-	<NetworkLibPath>$(UdkInstallDir)Build\NetworkPkg\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\NetworkPkg\Library\</NetworkLibPath>
-	<SecurityLibPath>$(UdkInstallDir)Build\SecurityPkg\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\SecurityPkg\Library\</SecurityLibPath>
+    <UdkToolChain>VS2015x86</UdkToolChain>
+    <UdkOutDir>OUTPUT</UdkOutDir>
+    <ShellLibPath>$(UdkInstallDir)Build\Shell\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\ShellPkg\Library\</ShellLibPath>
+    <IntelFrameworkModuleLibPath>$(UdkInstallDir)Build\IntelFrameworkModuleAll\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\IntelFrameworkModulePkg\Library\</IntelFrameworkModuleLibPath>
+    <IntelFrameworkLibPath>$(UdkInstallDir)Build\IntelFramework\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\IntelFrameworkPkg\Library\</IntelFrameworkLibPath>
+    <MdeModuleLibPath>$(UdkInstallDir)Build\MdeModule\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\MdeModulePkg\Library\</MdeModuleLibPath>
+    <MdeLibPath>$(UdkInstallDir)Build\Mde\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\MdePkg\Library\</MdeLibPath>
+    <NetworkLibPath>$(UdkInstallDir)Build\NetworkPkg\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\NetworkPkg\Library\</NetworkLibPath>
+    <SecurityLibPath>$(UdkInstallDir)Build\SecurityPkg\$(UdkConfiguration)_$(UdkToolChain)\$(UdkPlatform)\SecurityPkg\Library\</SecurityLibPath>
   </PropertyGroup>
   <ItemGroup>
     <BuildMacro Include="UdkConfiguration">
